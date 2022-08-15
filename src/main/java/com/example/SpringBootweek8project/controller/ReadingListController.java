@@ -27,9 +27,9 @@ public class ReadingListController {
     }
 
 
-    @PostMapping("/{id}/reading_lists")
-    public ReadingListDTO createBook(@Valid @RequestBody CreateReadingList createUserReadingListDTO){
-        return readingListService.create(createUserReadingListDTO);
+    @PostMapping("/{id}/readingLists")
+    public ReadingListDTO createBook(@Valid @RequestBody CreateReadingList createReadingListDTO){
+        return readingListService.create(createReadingListDTO);
     }
 
 

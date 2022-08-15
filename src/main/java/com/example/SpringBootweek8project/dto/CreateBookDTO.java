@@ -9,6 +9,7 @@ import java.util.List;
 
 @Data
 public class CreateBookDTO {
+    private Long id;
     @NotBlank
     private String name;
     @Min(1)
