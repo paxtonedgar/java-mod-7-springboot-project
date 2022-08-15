@@ -34,12 +34,10 @@ public class Book {
     @CreatedDate
     private LocalDate publishDate;
 
-
     @ManyToOne(cascade = CascadeType.ALL)
     private Author author;
 
     @ManyToMany(mappedBy = "bookList", cascade = CascadeType.DETACH)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     private List<Genre> genreList = new ArrayList<>();
 
 }

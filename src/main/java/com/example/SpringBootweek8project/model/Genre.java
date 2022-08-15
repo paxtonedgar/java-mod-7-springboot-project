@@ -22,7 +22,7 @@ public class Genre {
     private Long id;
     @NotBlank
     private String name;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.REFRESH)
     @JoinColumn(name = "book_id")
     private List<Book> bookList = new ArrayList<>();
 

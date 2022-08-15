@@ -24,7 +24,8 @@ public class Author {
     @NotBlank
     private String name;
 
-    @OneToMany
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private List<Book> bookList = new ArrayList<>();
 
 }
